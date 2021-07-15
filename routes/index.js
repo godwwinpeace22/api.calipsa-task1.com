@@ -5,7 +5,6 @@ const db = require("../data.json");
 const ITEMS_PER_PAGE = 10;
 
 router.get("/events", function (req, res, next) {
-  // Todo: check for authentication;
   // Todo: CORS
 
   const query = req.query;
@@ -61,7 +60,6 @@ router.get("/events", function (req, res, next) {
       })
     : result;
 
-  console.log({ end, start, outcome }, result[0]);
   // paginate
   const skip = page == 1 ? 0 : (page - 1) * ITEMS_PER_PAGE;
   const endAt = skip + ITEMS_PER_PAGE;

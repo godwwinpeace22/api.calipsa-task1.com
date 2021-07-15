@@ -40,9 +40,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-// Logger requests
+// Logger - log requests
 app.use(function (req, res, next) {
-  // Ideally, this should be done in a proper db or a logging service.
+  // Ideally, this should be done with a proper db or a logging service.
   const timestamp = new Date();
 
   const newLogs = {
